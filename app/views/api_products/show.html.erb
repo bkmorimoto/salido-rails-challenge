@@ -1,1 +1,14 @@
-Hello World!
+<% @results.each do |result| %>
+  Name: <%= result.name %><br>
+  URL:  <%= result.url %><br>
+  Appellation: <%= result.appellation %><br>
+  result Type: <%= result.product_type %><br>
+  Varietal: <%= result.varietal %><br>
+  Vineyard: <%= result.vineyard %><br>
+  Description: <%= result.description %><br>
+  Price Max: <%= result.price_max %><br>
+  Price Min: <%= result.price_min %><br>
+  Price Retail: <%= result.price_retail %><br>
+  Highest Rating: <%= result.highest_rating %><br>
+  <br>
+<% end %>
