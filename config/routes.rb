@@ -7,6 +7,12 @@ Rails.application.routes.draw do
 
   resources :products
 
+  scope :api do
+    scope :products do
+      get '/' => 'api_products#show'
+    end
+  end
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
