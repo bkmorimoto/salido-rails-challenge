@@ -1,6 +1,6 @@
 class ApiProductsController < ApplicationController
 
-  def show
+  def search
     @results = Product.search(params[:search])
     render json: @results
   end
