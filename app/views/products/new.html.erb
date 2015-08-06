@@ -1,0 +1,25 @@
+<%= form_for @product do |f| %>
+  <%= f.label :name %>:
+    <%= f.text_field :name %><br>
+  <%= f.label :url %>:
+    <%= f.text_field :url %><br>
+  <%= f.label :appellation %>:
+    <%= f.text_field :appellation %><br>
+  <%= f.label :product_type %>:
+    <%= f.text_field :product_type %><br>
+  <%= f.label :varietal %>:
+    <%= f.text_field :varietal %><br>
+  <%= f.label :vineyard %>:
+    <%= f.text_field :vineyard %><br>
+  <%= f.label :description %>:
+    <%= f.text_area :description %><br>
+  <%= f.label :price_max %>:
+    <%= f.text_field :price_max %><br>
+  <%= f.label :price_min %>:
+    <%= f.text_field :price_min %><br>
+  <%= f.label :price_retail %>:
+    <%= f.text_field :price_retail %><br>
+  <%= f.label :highest_rating %>:
+    <%= f.text_field :highest_rating %><br>
+  <%= f.submit %>
+<% end %>
