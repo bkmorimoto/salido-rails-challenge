@@ -5,7 +5,6 @@ class CreateProducts < ActiveRecord::Migration
       t.string :name
       t.string :url
       t.string :appellation
-      t.string :label
       t.string :product_type
       t.string :varietal
       t.string :vineyard

@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   scope :api do
     scope :products do
       get '/' => 'api_products#show'
+      get '/update' => 'api_products#update'
     end
   end
 
