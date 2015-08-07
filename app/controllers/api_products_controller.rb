@@ -1,4 +1,5 @@
 class ApiProductsController < ApplicationController
+  skip_before_filter  :verify_authenticity_token
 
   def search
     @results = Product.search(params[:search])
@@ -6,7 +7,8 @@ class ApiProductsController < ApplicationController
   end
 
   def update
-    @result = Product.update(params[:product_id], params)
+    p params
+    @result = Product.update(params[:id], params)
     render json: @result
   end
 

@@ -11,7 +11,6 @@ while product_list['Products']['List'].length == 100
     current_product.name = product['Name']
     current_product.url = product['Url']
     current_product.appellation = product['Appellation']['Name'] if product['Appellation']
-    current_product.label = product['Labels']
     current_product.product_type = product['Type']
     current_product.varietal = product['Varietal']['Name'] if product['Varietal']
     current_product.vineyard = product['Vineyard']['Name'] if product['Vineyard']

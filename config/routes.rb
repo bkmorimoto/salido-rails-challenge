@@ -8,11 +8,13 @@ Rails.application.routes.draw do
   resources :products
   get '/search' => 'products#search'
 
-  scope :api do
-    scope :v1 do
-      scope :products do
+  scope '/api' do
+    scope '/v1' do
+      scope '/products' do
         get '/' => 'api_products#search'
-        get '/update' => 'api_products#update'
+        scope '/:id' do
+          put '/' => 'api_products#update'
+        end
       end
     end
   end

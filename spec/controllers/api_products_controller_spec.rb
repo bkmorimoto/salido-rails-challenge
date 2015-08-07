@@ -18,7 +18,7 @@ RSpec.describe ApiProductsController, type: :controller do
 
     it 'updates a single product based on id' do
       product_id = product.id
-      update_product = JSON.parse(RestClient.get "http://localhost:3000/api/v1/products/update?product_id=#{product_id}&name=test")
+      update_product = JSON.parse(RestClient.put "http://localhost:3000/api/v1/products/#{product_id}", {:name => "test"})
       expect(update_product['name']).to eq("test")
     end
   end
