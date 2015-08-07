@@ -7,7 +7,6 @@ class ApiProductsController < ApplicationController
   end
 
   def update
-    p params
     @result = Product.update(params[:id], params)
     render json: @result
   end
