@@ -9,9 +9,11 @@ Rails.application.routes.draw do
   get '/search' => 'products#search'
 
   scope :api do
-    scope :products do
-      get '/' => 'api_products#search'
-      get '/update' => 'api_products#update'
+    scope :v1 do
+      scope :products do
+        get '/' => 'api_products#search'
+        get '/update' => 'api_products#update'
+      end
     end
   end
 
