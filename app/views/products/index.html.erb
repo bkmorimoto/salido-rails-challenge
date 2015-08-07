@@ -1,11 +1,7 @@
 <%= link_to 'New Product', new_product_path %><br>
 <%= link_to 'Search Product', search_path %><br>
 <% @products.each do |product| %>
-  <%= product.abc_id %><br>
-  <%= product.name %><br>
-  <%= product.url %><br>
-  <%= product.appellation %><br>
-  <%= product.vineyard %><br>
-  <%= link_to 'Edit Product', edit_product_path(product) %><br>
+  <%= link_to product.name, product_path(product) %>
+  <%= link_to 'Edit', edit_product_path(product) %><br>
   <br>
 <% end %>
